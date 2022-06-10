@@ -18,7 +18,8 @@ class GrupoFactory extends Factory
     public function definition()
     {
         return [
-            'nombre' => $this->faker->name(20),
+            'nombre_alumno' => $this->faker->name(20),
+            'nombre_profesor' => $this->faker->name(1),
             'numero_alumnos' => $this->faker->randomNumber(2)
         ];
     }

@@ -12,7 +12,8 @@ class Grupo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre_alumnos',
+        'nombre_alumno',
+        'nombre_profesor',
         'numero_alumnos'
     ];
 
