@@ -12,11 +12,15 @@ class Grupo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
+        'nombre_alumnos',
         'numero_alumnos'
     ];
 
     protected $hidden = [
         'remember_token'
     ];
+
+    public function grupoAlumno() {
+        return $this->belongsTo(Alumno::class);
+    }
 }
