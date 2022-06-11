@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
             AlumnoSeeder::class,
             GrupoSeeder::class,
             CursoSeeder::class,
-            FacturaSeeder::class
+            FacturaSeeder::class,
+            ClaseSeeder::class,
+            HorarioSeeder::class
         ]);
     }
 }

@@ -22,4 +22,8 @@ class Clase extends Model
     protected $hidden = [
         'remember_token'
     ];
+
+    public function claseHorario() {
+        return $this->hasMany(Horario::class);
+    }
 }
