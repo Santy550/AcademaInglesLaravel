@@ -21,7 +21,4 @@ class Curso extends Model
         'remember_token'
     ];
 
-    public function cursoHorario() {
-        return $this->hasMany(Horario::class);
-    }
 }
