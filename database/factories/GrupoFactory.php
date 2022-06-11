@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Alumno;
 use App\Models\Grupo;
+use App\Models\Profesor;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class GrupoFactory extends Factory
@@ -14,12 +16,14 @@ class GrupoFactory extends Factory
      */
 
     protected $model = Grupo::class;
+    protected $model1 = Alumno::class;
+    protected $model2 = Profesor::class;
 
     public function definition()
     {
         return [
-            'nombre_alumno' => $this->faker->name(20),
-            'nombre_profesor' => $this->faker->name(1),
+            'alumno_id' => Alumno::factory(),
+            'profesor_id' => Profesor::factory(),
             'numero_alumnos' => $this->faker->randomNumber(2)
         ];
     }

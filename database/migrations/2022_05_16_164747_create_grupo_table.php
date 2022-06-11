@@ -15,8 +15,8 @@ class CreateGrupoTable extends Migration
     {
         Schema::create('grupo', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_alumno')->references('nombre')->on('alumno');
-            $table->string('nombre_profesor')->references('nombre')->on('profesor');
+            $table->foreignId('alumno_id')->references('id')->on('alumno');
+            $table->foreignId('profesor_id')->references('id')->on('profesor');
             $table->integer('numero_alumnos')->references('id')->on('alumno');
             $table->timestamps();
         });

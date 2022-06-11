@@ -34,4 +34,8 @@ class Alumno extends Model
         return $this->hasMany(Grupo::class);
     }
 
+    public function alumnoFactura() {
+        return $this->hasMany(Factura::class);
+    }
+
 }

@@ -20,4 +20,8 @@ class Factura extends Model
     protected $hidden = [
         'remember_token'
     ];
+
+    public function facturaAlumno() {
+        return $this->belongsTo(Alumno::class);
+    }
 }
