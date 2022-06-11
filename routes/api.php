@@ -27,6 +27,6 @@ Route::get('profesores', [ProfesorController::class, 'getProfesores']);
 Route::get('alumnos', [AlumnoController::class, 'getAlumnos']);
 Route::post('visitante', [VisitanteController::class, 'insertVisitantes']);
 Route::get('getVisitantes', [VisitanteController::class, 'getVisitantes']);
-/*Route::post('login', [LoginController::class, 'authenticate']);
+Route::post('login', [LoginController::class, 'authenticate']);
 Route::get('mostrar', [LoginController::class, 'mostrar'])->middleware('auth:api');
-Route::post('deleteToken', [DeleteTokenController::class, 'deleteToken'])->middleware('auth:api');*/
+Route::post('deleteToken', [DeleteTokenController::class, 'deleteToken'])->middleware('auth:api');
