@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlumnoController;
-use App\Http\Controllers\DeleteTokenController;
+use App\Http\Controllers\LogOut;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfesorController;
 use App\Http\Controllers\VisitanteController;
@@ -29,4 +29,4 @@ Route::post('visitante', [VisitanteController::class, 'insertVisitantes']);
 Route::get('getVisitantes', [VisitanteController::class, 'getVisitantes']);
 Route::post('login', [LoginController::class, 'authenticate']);
 Route::get('mostrar', [LoginController::class, 'mostrar'])->middleware('auth:api');
-Route::post('deleteToken', [DeleteTokenController::class, 'deleteToken'])->middleware('auth:api');
+Route::post('logOut', [LogOut::class, 'logOut'])->middleware('auth:api');

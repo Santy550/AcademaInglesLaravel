@@ -9,9 +9,9 @@ class LoginController extends Controller
 {
     public function authenticate(Request $request){
         $credentials = $request->validate([
-            'name' => '',
-            'email' => '',
-            'password' => ['required'],
+            'nombre' => ['required'],
+            'email' => ['required'],
+            'contraseña' => ['required'],
         ]);
 
         if (Auth::check()) {
@@ -19,7 +19,7 @@ class LoginController extends Controller
         }
 
         if (Auth::attempt($credentials)) {
-            $identificador_user = session('idAlumno');
+            $identificador_alumno = session('idAlumno');
             return Auth::alumno()->createToken('tokenUser')->accessToken;
         }
         return 'No estas registrado';
