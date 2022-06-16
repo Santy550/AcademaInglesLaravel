@@ -27,6 +27,7 @@ Route::get('profesores', [ProfesorController::class, 'getProfesores']);
 Route::get('alumnos', [AlumnoController::class, 'getAlumnos']);
 Route::post('visitante', [VisitanteController::class, 'insertVisitantes']);
 Route::get('getVisitantes', [VisitanteController::class, 'getVisitantes']);
+Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'authenticate']);
 Route::get('mostrar', [LoginController::class, 'mostrar'])->middleware('auth:api');
 Route::post('logOut', [LogOut::class, 'logOut'])->middleware('auth:api');
